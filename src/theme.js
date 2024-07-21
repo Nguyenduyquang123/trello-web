@@ -1,6 +1,6 @@
 
-import { teal, cyan, deepOrange, orange, red } from '@mui/material/colors'
-import { experimental_extendTheme as extendTheme} from '@mui/material/styles'
+import { teal, cyan, deepOrange, orange } from '@mui/material/colors'
+import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
 
 const theme = extendTheme({
   trello:{

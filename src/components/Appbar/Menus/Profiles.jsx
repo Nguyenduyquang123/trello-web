@@ -32,7 +32,7 @@ function Profiles() {
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}
         >
-          <Avatar sx={{ width: 30, height: 30 }}
+          <Avatar sx={{ width: 36, height: 36 }}
             alt='Qangdz'
             src="https://avatars.githubusercontent.com/u/114758169?s=400&u=47ecd3c2627ff8952d240bf87d045e70a98806db&v=4" />
 

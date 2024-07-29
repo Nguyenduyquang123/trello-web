@@ -45,7 +45,7 @@ function BoardBar() {
       <Box sx={{ display:'flex', alignItems:'center', gap: 2 }}>
         <Chip
           sx={MENU_CSS}
-          icon={<DashboardIcon />}
+          icon={<DashboardIcon  />}
           label="Nguyenduyquang"
           clickable
         />
@@ -57,7 +57,7 @@ function BoardBar() {
         />
         <Chip
           sx={MENU_CSS}
-          icon={<AddToDriveIcon />}
+          icon={<AddToDriveIcon/>}
           label="Add To Google Drive"
           clickable
         />
@@ -76,9 +76,9 @@ function BoardBar() {
       </Box>
 
       <Box sx={{ display:'flex', alignItems:'center', gap: 2 }}>
-        <Button 
+        <Button
           startIcon={<PersonAddAlt1Icon />}
-          variant="outlined" 
+          variant="outlined"
           sx={{
             color:'white',
             borderColor:'white',
@@ -89,7 +89,19 @@ function BoardBar() {
         >
           nvite
         </Button>
-        <AvatarGroup max={4} sx={{ '& .MuiAvatar-root':{ width: '36px', height: '36px', fontSize:'16px', border:'none' }, gap:'3px' }}>
+        <AvatarGroup max={4} sx={{
+          '& .MuiAvatar-root':{
+            width: '36px',
+            height: '36px',
+            fontSize:'16px',
+            border:'none',
+            color:'white',
+            cursor:'pointer',
+            '&:first-of-type':{ bgcolor:'#a4b0be' }
+
+          },
+          gap:'3px'
+        }}>
           <Tooltip title='quang'>
             <Avatar alt="Remy Sharp" src="https://avatars.githubusercontent.com/u/114758169?v=4" />
           </Tooltip>

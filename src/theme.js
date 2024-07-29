@@ -1,14 +1,16 @@
 
-
-
-
-import { teal, cyan, deepOrange, orange } from '@mui/material/colors'
 import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
+
+const APP_BAR_HEIGHT ='58px'
+const BOARD_BAR_HEIGHT ='60px'
+const BOARD_CONTENT_HEIGHT = `calc(100vh - ${APP_BAR_HEIGHT} - ${BOARD_BAR_HEIGHT})`
+
 
 const theme = extendTheme({
   trello:{
-    appbarHeight:'58px',
-    boardbarHeight:'60px'
+    appbarHeight:APP_BAR_HEIGHT,
+    boardbarHeight:BOARD_BAR_HEIGHT,
+    boardContentHeight:BOARD_CONTENT_HEIGHT
   },
   // colorSchemes: {
   //   light: {
@@ -38,7 +40,8 @@ const theme = extendTheme({
           },
           '*::-webkit-scrollbar-thumb:hover': {
             backgroundColor: 'white'
-          }
+          },
+          '*::-webkit-scrollbar-track': { m:2 }
         }
       }
     },
@@ -62,6 +65,14 @@ const theme = extendTheme({
         })
       }
     },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          '&.MuiTypography-body1':{fontSize: '0.875rem' }
+        }
+      }
+    },
+    
     MuiOutlinedInput: {
       styleOverrides: {
         root: ({ theme }) => ({

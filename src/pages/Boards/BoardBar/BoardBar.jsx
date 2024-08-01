@@ -9,8 +9,8 @@ import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup'
 import { Tooltip } from '@mui/material'
 import Button from '@mui/material/Button'
-import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
-
+import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1'
+import { capitalizeFirstLetter } from '~/utils/formatter'
 
 
 const MENU_CSS = {
@@ -27,7 +27,8 @@ const MENU_CSS = {
   }
 }
 
-function BoardBar() {
+function BoardBar({ board } ) {
+
   return (
     <Box sx={{
       width:'100%',
@@ -38,21 +39,20 @@ function BoardBar() {
       gap: 2,
       paddingX: 2,
       overflowX:'auto',
-      bgcolor: (theme) => ( theme.palette.mode === 'dark' ? '#34495e' : '#1976d2' ),
-      borderBottom: '1px solid white'
+      bgcolor: (theme) => ( theme.palette.mode === 'dark' ? '#34495e' : '#1976d2' )
     }}>
 
       <Box sx={{ display:'flex', alignItems:'center', gap: 2 }}>
         <Chip
           sx={MENU_CSS}
-          icon={<DashboardIcon  />}
-          label="Nguyenduyquang"
+          icon={<DashboardIcon />}
+          label= {board?.title}
           clickable
         />
         <Chip
           sx={MENU_CSS}
           icon={<VpnLockIcon />}
-          label="Puclic/Private Workspace"
+          label= { capitalizeFirstLetter( board?.type) }
           clickable
         />
         <Chip

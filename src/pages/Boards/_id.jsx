@@ -6,6 +6,7 @@ import BoardContent from './BoardContent/BoaedContent'
 import { mockData } from '~/apis/mock-data'
 
 
+
 function Board() {
   return (
     <Container disableGutters maxWidth={false} sx={{ height:'100vh' }}>
